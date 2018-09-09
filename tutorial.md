@@ -6,7 +6,7 @@ This tutorial shows you how to set up a Jupyter Notebook server with a
 [![button](http://gstatic.com/cloudssh/images/open-btn.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/wardharold/julia-notebook&page=editor&tutorial=tutorial.md)
 
 If you want to create a new project for your notebook server proceed to 
-[Task 0](#task-0-(optional)-create-a-project-with-a-billing-account-attached). 
+[Task 0](#task-0-optional-create-a-project-with-a-billing-account-attached). 
 Otherwise you can skip that task and use and existing project.
 
 ## Task 0 (OPTIONAL) Create a project with a billing account attached 
@@ -21,7 +21,7 @@ gcloud config configurations create -- activate $PROJECT
 gcloud config set compute/zone $ZONE
 ```
 
-## Task 1  Set up your environment variables 
+## Task 1 Set up your environment variables 
 Ensure you are working with the project you want to use to run your notebook server.
 
 Set the environment variables for your project.
