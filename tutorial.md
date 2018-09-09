@@ -40,7 +40,7 @@ Make sure none of these values is empty
 echo $PROJECT $SERVERNAME $ZONE
 ```
 
-Go to the browser you will use to connect to your notebook server and browse to [Your Address As a Service](https://v4.idend.me). Copy the resulting IP address.
+Go to the browser you will use to connect to your notebook server and browse to [Your Address As a Service](https://v4.ident.me). Copy the resulting IP address.
 
 ```sh
 SOURCECIDR=your-browsers-ip-address
