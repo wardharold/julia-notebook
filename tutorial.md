@@ -90,7 +90,7 @@ for five to ten minutes.
 ## Task 4 Connect to your notebook server
 Determine the public IP address of your notebook server.
 ```sh
-gcloud compute instances list --format="value(name, networkInterfaces.accessConfigs[0].natIP)" --filter="$SERVERNAME" | awk '{print $}'
+gcloud compute instances list --format="value(name, networkInterfaces.accessConfigs[0].natIP)" --filter="$SERVERNAME" | awk '{print $2}'
 ```
 
 Your notebook server runs on port 8089 and is configured to require TLS (https). The ```startup.sh``` script creates a self-signed certificate to secure communications with your notebook server.
