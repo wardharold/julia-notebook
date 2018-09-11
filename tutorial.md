@@ -14,8 +14,9 @@ Otherwise you can skip that task and use and existing project.
 ```sh
 ORG=[YOUR_ORG]
 BILLING_ACCOUNT=[YOUR_BILLING_ACCOUNT_NAME]
+PROJECT=[NAME FOR THE PROJECT YOU WILL CREATE]
 ZONE=[COMPUTE ZONE YOU WANT TO USE]
-gcloud projects create $PROJECT" --organization=$ORG
+gcloud projects create $PROJECT --organization=$ORG
 gcloud beta billing projects link $PROJECT --billing-account=$(gcloud beta billing accounts list | grep $BILLING_ACCOUNT | awk '{print $1}')
 gcloud config configurations create -- activate $PROJECT
 gcloud config set compute/zone $ZONE
@@ -32,7 +33,7 @@ ZONE=$(gcloud config get-value compute/zone)
 
 Choose a name for your server and set the SERVERNAME envrionment variable.
 ```sh
-SERVERNAME=your-preferred-servername
+SERVERNAME=[YOUR PREFERRED SERVER NAME]
 ```
 
 Make sure none of these values is empty
@@ -43,7 +44,7 @@ echo $PROJECT $SERVERNAME $ZONE
 Go to the browser you will use to connect to your notebook server and browse to [Your Address As a Service](https://v4.ident.me). Copy the resulting IP address.
 
 ```sh
-SOURCECIDR=your-browsers-ip-address
+SOURCECIDR=[IP ADDRESS OF YOUR BROWSER]
 ```
 
 ## Task 2 Set up a password for your notebook server
@@ -58,7 +59,7 @@ pip3 install jupyter
 
 Generate a hashed password.
 ```
-PASSWD=your-preferred-password
+PASSWD=[YOUR PREFERRED PASSWORD]
 HASHED_PASSWD=$(python3 -c "from notebook.auth import passwd; print(passwd(\"${PASSWD}\"))")
 ```
 
